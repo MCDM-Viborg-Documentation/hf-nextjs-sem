@@ -1,0 +1,3 @@
+# MediaCollege Denmark
+
+# Indledning.
