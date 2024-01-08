@@ -29,7 +29,7 @@ import Link from 'next/link';
 import styles from './navigation.module.css'
 import Image from 'next/image';
 
-const Naviagation = () => {
+const Navigation = () => {
 
     return (
         <div className={styles.container}>
@@ -49,7 +49,7 @@ const Naviagation = () => {
 
 }
 
-export default Naviagation;
+export default Navigation;
 ```
 
 I `navigation.module.css` indsættes. 
