@@ -6,7 +6,7 @@ At alt er læst og *forstået* i den indlende opgave.
 
 Det er vigtigt at alle opgaver :dart: og spørgsmå :question: er løst.
 
-Husk også at læs igennem de links der er vedhænngt.
+Husk også at læs igennem de links der er vedhængt.
 
 I de kommende opgaver bygger vi vidre på samme projekt.
 
