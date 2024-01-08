@@ -16,7 +16,7 @@ Husk derfor **ALTID** at læse **README.md** og **OPGAVER.MD** inden du går iga
 
 ### :dart: Opgave: Test data adgang.
 
-Inden vi starter på at få overblik over projektet, så tester vi adgangen til data.i databasen.
+Inden vi starter på at få overblik over projektet, så tester vi adgangen til data´en i databasen.
 
 Vi har allerede lavet meget af alt data behandlingen - så vi kan koncentrere os om at abejde med den data og hente den på forksellige måder.
 
