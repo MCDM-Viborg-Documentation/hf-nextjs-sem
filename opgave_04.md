@@ -204,7 +204,7 @@ Og til module.css er tilføjet.
     display: flex;
     align-items: center;
     justify-content: center;
-    margin : 0 auto;
+    margin : 20px auto;
     
 }
 
@@ -230,7 +230,9 @@ På vores knap tilføjer vi nu et klik event `onClick`.
 
 ## Afslutning.
 
-Inden du hopper til opgave 3. Så lav lige 3 knapper der sætter Alle ikoer til at være enten LILLE, STOR og MELLEM.
+:dart: Inden du hopper til opgave 3. 
+
+Så lav lige 3 knapper der sætter Alle ikoer til at være enten LILLE, STOR og MELLEM.
 
 Du bestemmer i denne omgang hvad de størrelser er. Leg lidt med det.
 
@@ -239,6 +241,11 @@ I næste opgave laver vi lidt mere og så skal du gøre action panelet til et se
 `<DevIconsActionPanel></DevIconsActionPanel>`
 
 Men der er i næste opgave.
+
+
+### Næste skridt.
+
+Opgave 05
 
 
 
