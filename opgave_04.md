@@ -8,14 +8,13 @@ Det er vigtigt at alle opgaver :dart: og spørgsmå :question: er løst.
 
 Husk også at læs igennem de links der er vedhænngt.
 
-## :dart: 1. Opgave Styling og dynamik.
+## :dart: 1. Opgave Styling og Dynamik.
 
 Lad os arbejde en lille smule med vores ikoner.
 
 Eller det vil lidt om styling og det er vigtigt at vi følger dette da vi skal bruge den i næste opgave også.
 
 Nogenlunde således skal vores Icons se ud.      
- 
 
 ```javascript
 import { 
