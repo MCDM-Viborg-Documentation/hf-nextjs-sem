@@ -12,7 +12,7 @@ Husk også at læs igennem de links der er vedhænngt.
 
 Fordi dette er et "skole projekt" opretter vi nu en rute til opgave løsninger og eksperimenter.
 
-1. Opret en `assignements` mappe i `app` mappen.
+1. Opret en `assignments` mappe i `app` mappen.
 2. Opret `page.js` og `page.module.css` i `assigments` mappen.
 
 I `page.js` indsættes følgende:
