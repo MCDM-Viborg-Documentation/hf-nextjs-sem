@@ -144,15 +144,20 @@ Hvis slideren tilpasser sig knappernes værdi - så er alt godt :muscle:
 
 # Afslutning
 
-Her er react documentaionen for react hooks     
+Her er react dokumentationen for react hooks     
+:link: `hooks` generelt     
 https://react.dev/reference/react/hooks
 
 Start med:      
-https://react.dev/reference/react/useState      
-https://react.dev/reference/react/useEffect     
+:link: `useState`       
+https://react.dev/reference/react/useState    
+:link: `useEffect`   
+https://react.dev/reference/react/useEffect    
+:link: `useRef`   
 https://react.dev/reference/react/useRef        
 
-Man kan lave sine egne og der er også nogen der laver en masse til forskellig brug.     
+
+:link: Man kan lave sine egne og der er også nogen der laver en masse til forskellig brug.  
 https://usehooks.com/
 
 

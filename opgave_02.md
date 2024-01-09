@@ -62,7 +62,8 @@ Vi har oprettet et sted til opgaver løsninger og diverse.
 
 Man kommer til at oprette utrolig mange `page.js` filer og mapper - Det gælder om at holde tunge lige i munden.
 
-`page.js` https://nextjs.org/docs/app/api-reference/file-conventions/page
+:link: `page.js`      
+https://nextjs.org/docs/app/api-reference/file-conventions/page
 
 Se linkey og bemærk de to parametre et `page`komponent "bære" med sig, `params` og `searchParams`
 

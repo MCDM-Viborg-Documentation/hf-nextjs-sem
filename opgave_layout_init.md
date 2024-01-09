@@ -8,7 +8,7 @@ Husk også at læs igennem de links der er vedhænngt.
 
 ## :dart: 1. Opgave Layout.
 
-`layout.js`             
+:link: `layout.js`            
 https://nextjs.org/docs/app/api-reference/file-conventions/layout
 
 `layout.js` er en "indbygget" file type lige som `page.js` - selve navnet tjerne et formål og kan *ikke* omdøbes.
@@ -43,33 +43,36 @@ Start med at oprette to filer i `assignments` mappen.
 I `layout.module.css` indsætter vi:
 
 ```css
-.layout {
-  display: flex;
-  width: 100%;
-  min-height: 100%;
-  height: auto;
-  padding-top : 60px;
-  background-color: var(--navigation-background-color);
+.navBtn {
+    user-select: none;
+    background-color: cadetblue;
+    padding : 0 10px;
 }
 
-.navigation {
-  position: relative;
-  color: var(--navigation-color);
-  width : 300px;
-
+.navBtn:hover {
+    background-color: #333;
+    color: #fff;
 }
 
-.navigation .navContainer {
-  position: sticky;
-  width: 100%;
-  top : 60px;
+.navBtn.active {
+    background-color: green;
 }
 
-.content {
-  background-color: #333;
-  width: 100%;
-  padding: 20px;
+.navBtn svg {
+    width : 25px;
+    height : 25px;
 }
+
+.navBtn a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    line-height: 60px;
+}
+
 ```
 
 og i `layout.js` indsætter vi:
@@ -291,8 +294,8 @@ const DevAssignmentsNavBtn = ({link, title})
 Så vi kan indsætte knapper efterhånden som vi laver flere og flere opgaver/assignments.
 
 ```html
-<DevAssignmentsNavBtn link={''} title={'Assignments'}></DevAssignmentsNavBtn>
-<DevAssignmentsNavBtn link={'icons'} title={'Icon Maskiner'}></DevAssignmentsNavBtn>
+<DevAssignmentsNavBtn link={'/assignments'} title={'Assignments'} />
+<DevAssignmentsNavBtn link={'/assignments/icons'} title={'Icons'} />
 ```
 
 Men læg mærke til hvordan det *blinker og bamler* når vi navigere med vores knapper. 
@@ -305,11 +308,11 @@ Så lad os straks ændre det og se den store forskel.
 
 Vi ændre 
 ```html
-<a href={`/assignments/${link}`}><FaJsSquare / > {title}</a>
+<a href={`${link}`}><FaJsSquare / > {title}</a>
 ```
-til
+til `Link`
 ```html
-<Link href={`/assignments/${link}`}><FaJsSquare / > {title}</Link>
+<Link href={`${link}`}><FaJsSquare / > {title}</Link>
 ```
 
 og importere komponentet.
@@ -317,7 +320,7 @@ og importere komponentet.
 import Link from 'next/link';
 ```
 
-Se nu hvor "snappy" det hele er - side skiftene er instant og alt efter hvordan vi arrangere vores indhold kan vi lave virkelig hurtigt responderede applikationer. - Nu er det data´en vi venter på!.
+Se nu hvor "snappy" :8ball: det hele er  - side skiftene er instant og alt efter hvordan vi arrangere vores indhold kan vi lave virkelig hurtigt responderede applikationer. - Nu er det data´en vi venter på!.
 
 Nu kunne man få lyst til at ændre på scrll i forhold til at det kunne ligge internet i komponent icons f.eks. Men det lader vi lige ligge for nu - det handler mere om styling.
 
@@ -337,8 +340,10 @@ Alle områder der er i rivende udvikling, så træk vejret, det tager tid og "5-
 
 Læs dokumentationen om `layout.js` og læs også om `Link`
 
-`layout.js` : https://nextjs.org/docs/app/api-reference/file-conventions/layout       
-`Link` : https://nextjs.org/docs/app/api-reference/components/link
+:link: `layout.js`      
+https://nextjs.org/docs/app/api-reference/file-conventions/layout       
+:link: `Link`     
+https://nextjs.org/docs/app/api-reference/components/link
 
 Der er især god viden at hente omkring `Link` - se f.eks hvad attributten 'scroll' er for én.
 
