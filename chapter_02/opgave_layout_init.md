@@ -43,36 +43,36 @@ Start med at oprette to filer i `assignments` mappen.
 I `layout.module.css` indsætter vi:
 
 ```css
-.navBtn {
-    user-select: none;
-    background-color: cadetblue;
-    padding : 0 10px;
+.layout {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  padding-top : 60px;
+  background-color: var(--navigation-background-color);
 }
 
-.navBtn:hover {
-    background-color: #333;
-    color: #fff;
+.navigation {
+  position: relative;
+  color: var(--navigation-color);
+  width : 300px;
+
 }
 
-.navBtn.active {
-    background-color: green;
+.navigation .navContainer {
+
+  width: 100%;
+  position: sticky;
+  top : 60px;
+
 }
 
-.navBtn svg {
-    width : 25px;
-    height : 25px;
+.content {
+  background-color: #333;
+  width: 100%;
+  padding: 20px;
+  
 }
-
-.navBtn a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    line-height: 60px;
-}
-
 ```
 
 og i `layout.js` indsætter vi:

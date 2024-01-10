@@ -19,7 +19,7 @@ Kig på det object.
 let config = {
     small : 50,
     medium : 100,
-    max : 150
+    large : 150
 };
 ```
 
