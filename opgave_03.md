@@ -12,9 +12,10 @@ Husk også at læs igennem de links der er vedhænngt.
 
 Nu skal i kigge lidt tilbage i de gamle projekter. Vi skal have installeret ikoner.
 
-Vi benytter : https://react-icons.github.io/react-icons/
+:link: `react-icons`             
+https://react-icons.github.io/react-icons/
 
-læs på ovenstående side hvordan man importere et ikon.
+Læs på ovenstående side hvordan man importere et ikon.
 
 Installeres ved hjælp af terminalen.
 ```bash

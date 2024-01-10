@@ -144,7 +144,7 @@ const [size, setSize] = useState(150);
 let style = { width: `${size}px`, height:`${size}px` }
 // ---
 ```
-*(*husk at importere en reference til useState*)
+:bulb: *husk at importere en reference til useState*
 
 Læg mærke til at vi også benytte `size` `state` (variablen) i vores style.
 

@@ -106,11 +106,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 ```
 
-`<link>`
+:link: `<link>`
 Vi benytter Link for at optimere vores links struktur i applikationen.      
 https://nextjs.org/docs/app/api-reference/components/link
 
-`<Image>`
+:link: `<Image>`
 Vi benytter Image for at optimere vores billeder applikationen. 
 https://nextjs.org/docs/app/api-reference/components/image
 
@@ -120,7 +120,8 @@ Brug lidt tid på at læse om begge komponenter.
 
 Vi arbejder også med `layout.js` og i dette tilfæde viroes root.layout. Vi vil senere lavet endnu en layout fil.    
 
-`layout.js` https://nextjs.org/docs/app/api-reference/file-conventions/layout
+:link: `layout.js`    
+https://nextjs.org/docs/app/api-reference/file-conventions/layout
 
 ### module.css og variabler dark/light.
 I `navigation.module.css` filen skal i ligge mærke til brugen af variabler. Disse variabler er oprettet i `global.css`.
