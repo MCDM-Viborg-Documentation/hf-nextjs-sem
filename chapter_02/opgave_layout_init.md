@@ -350,4 +350,4 @@ Der er især god viden at hente omkring `Link` - se f.eks hvad attributten 'scro
 
 Senere gør vi menu-punkterne dynamisk - hvis du ikke kan vente :) så er du velkommen til at gøre det. Men vi vender tilbage til det senere. Lav det eventuelt som et *alternativt* komponent. 
 
-Næste skridt herfra er opgave_route_01.md
+Se index for næste opgave.

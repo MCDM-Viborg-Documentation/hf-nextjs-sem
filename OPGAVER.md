@@ -65,18 +65,18 @@ Referencer: https://nextjs.org/docs/getting-started/project-structure
 
 1. *page.js* 
     
-   `page.js` i roden af app mappen, er vores forside. På denne side har vi indsat ét komponent.         
+   :link: `page.js` i roden af app mappen, er vores forside. På denne side har vi indsat ét komponent.         
    https://nextjs.org/docs/app/api-reference/file-conventions/page
 
 1. *page.module.css* 
     
-   `page.module.css` Module stylesheet filen til vores page.js i roden.     
+   :link: `page.module.css` Module stylesheet filen til vores page.js i roden.     
    https://nextjs.org/docs/app/building-your-application/styling/css-modules
    
 
 1. *layout.js* 
     
-   `layout.js` Dette er vores **rod** layout og skal være tilstede. Det er vores "globale" wrapper og det er her vi vil lave en navigation der skal gå på tværs af hele sitet.      
+   :link: `layout.js` Dette er vores **rod** layout og skal være tilstede. Det er vores "globale" wrapper og det er her vi vil lave en navigation der skal gå på tværs af hele sitet.      
    https://nextjs.org/docs/app/api-reference/file-conventions/layout
 
    Rod-layout filen er den fil hvor *head* og *body* er defineret.
@@ -94,17 +94,17 @@ Referencer: https://nextjs.org/docs/getting-started/project-structure
 
 1. *not-found.js* 
     
-   `not-found.js` i roden af app mappen, er den side der vil vises hvis vores "route" ikke finder en `page.js` på den url vi kalder.            
+   :link: `not-found.js` i roden af app mappen, er den side der vil vises hvis vores "route" ikke finder en `page.js` på den url vi kalder.            
    https://nextjs.org/docs/app/api-reference/file-conventions/not-found
 
 2. *global.css*
 
-    `global.css` indholder den styling der gælder hele sitet.           
+    :link: `global.css` indholder den styling der gælder hele sitet.           
     https://nextjs.org/docs/app/building-your-application/styling/css-modules#global-styles
 
 2. *fav.ico*
 
-    `fav.ico`Det ikon vi ser på fanebladet i browseren.         
+    :link: `fav.ico`Det ikon vi ser på fanebladet i browseren.         
     https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons#favicon
 
 ### Boilerplate Box
@@ -178,7 +178,7 @@ Dermed er kompoentet serverside og skrevet allerede inden vi besøger siden. *(i
 
 Heri ligger der selvfølgelig en forventing om at den data ikke ændre sig særlig tit - og derfor kan det lige så godt komme fra vores `cache`.
 
-*(note: cache er den hukommelse, allerede hentet data, befinder sig i - browsere vil forsøge at benytte dette istedet for "hente igen")*.
+:bulb: cache er den hukommelse, allerede hentet data, befinder sig i - browsere vil forsøge at benytte dette istedet for "hente igen"*.
 
 ### :dart: Opgave: BoilerBox 'use client'
 
