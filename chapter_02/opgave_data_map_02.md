@@ -40,7 +40,7 @@ import DevDebugJson from '@/components/dev/devDebugJson/devDebugJson';
 
 const Page = async () => {
 
-    let gallery = 'umbras';
+    let gallery = 'umbra';
     const images = await fetchImagesForGallery(gallery);
 
     return (
