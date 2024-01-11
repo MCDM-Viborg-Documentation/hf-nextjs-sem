@@ -123,7 +123,7 @@ I dokumentet er det beskrevet hvad **fil-navn**, **type**, **folder** og **indho
 
 Så :pencil: ikonet henviser til en snippet-fil i snippets mappen. 
 
-Erstat nu `{JSON.stringify(galleries, null, 2)}` med `<DevDebugJson content{galleries} />
+Erstat nu `{JSON.stringify(galleries, null, 2)}` med `<DevDebugJson content={galleries} />
 
 :goal_net: Nu skulle du have en "Accordion" der ved klik toggler alt galleri dataen udskrevet som streng.
 
