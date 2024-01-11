@@ -17,6 +17,9 @@ Description : En liste til at holde øje med den kronolgiske rækkefølge af opg
 | opgave_git_init.md        | 2-1             |
 | opgave_layout_init.md     | 2-2             |
 | opgave_route_init.md      | 2-3             |
+| opgave_data_init.md       | 2-4             |
+| opgave_data_map_01        | 2-5             |
+| opgave_data_map_02        | 2-6             |
 
 :coffee: Kaffe Pause
 
