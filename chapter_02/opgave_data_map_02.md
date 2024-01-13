@@ -79,7 +79,8 @@ Igen gør vi det samme som sidst og indsætter et komponent.
 /public/umbra
 ```
 :link: 2. Så skal du downloade zip filen fra dette link    
-https://github.com/MCDM-Viborg-Documentation/hf-nextjs-sem/blob/main/assets/galleries.zip
+https://github.com/MCDM-Viborg-Documentation/hf-nextjs-sem/blob/main/assets/galleries.zip       
+:bulb: *Du skal trykke "download raw file" knappen* :arrow_down:
 
 Begge gallerier skal ligge i `public` mappen.
 
