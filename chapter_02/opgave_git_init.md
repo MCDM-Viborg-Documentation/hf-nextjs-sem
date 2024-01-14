@@ -1,3 +1,12 @@
+# Media College
+```
+Author      : Media College
+Department  : WEB 
+Year        : 2024 
+Description : NextJS Opgave
+Doc         : opgave_git_init 
+```
+
 # Forudsætning.
 
 Du **skal** have afsluttet Kapitel 1.

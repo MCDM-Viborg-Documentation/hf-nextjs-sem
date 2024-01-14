@@ -1,4 +1,12 @@
-# MediaCollege Denmark
+# Media College
+
+```
+Author      : Media College
+Department  : WEB 
+Year        : 2024 
+Description : NextJS Opgave
+Doc         : opgave_06
+```
 
 # Forudsætning.
 
@@ -8,159 +16,135 @@ Det er vigtigt at alle opgaver :dart: og spørgsmå :question: er løst.
 
 Husk også at læs igennem de links der er vedhænngt.
 
-## :dart: 1. Opgave Action Bar.
+## :dart: 1. Opgave Action Bar
 
-Svaret på forrige opgaver er **size** vi skal selvfølgelig bruge vores size værdi.
+Fik vi leget med knapperne.
 
-I `devicons.js` sætter vi size værdien `const [size, setSize] = useState(150);` og vi gør det hver gang vi kalder `setSize` funktionen.
-
-Vi sender `size` med som property til vores `<DevActionBar>` komponent 
+Jeg ender med at have tre knapper der ser sådan her ud i action baren.
 
 ```html
-<DevActionBar setSizeFunction={setSize} size={size}></DevActionBar>
+<div className={styles.actionBar}>
+    <span className={styles.btn} onClick={() => setSize(50)}>LILLE</span>
+    <span className={styles.btn} onClick={() => setSize(100)}>MELLEM</span>
+    <span className={styles.btn} onClick={() => setSize(150)}>STOR</span>
+</div>
 ```
 
-Så åbner vi komponentet `devActionBar.js` og tage imod vores ny `parameter`.
-
-```javascript
-const DevActionBar = ({setSizeFunction, size}) => {
-// ---
-```
-
-For at få plads til at udskrive vores size skal vi ændre lidt på vores `DevActionBar` komponent layout og opsætning. 
-
-Det sker ofte under udvikling at man har behove for at omstrukturere/refakturere sin kode og tilpasse den nye omstændigheder.
-
-Det gælder især når man starter med at udvikle fordi man ikke altid har taget højde for alle de elementer man har behov for. 
-
-Ofte bliver man også klogere undervejs og ser nye muligheder.
-
-Komponenter kan altid "lige" få en container mere :)
-
-Vi har behov for en "header" til vores komponent. Så vi kan udskrive vores størrelse.
+og jeg har sat `style` på alle ikoner.
 
 ```html
-    <div className={styles.container}>
-        <div className={styles.status}><h1>{size}</h1></div>
-        <div className={styles.actionBar}>
+<div className={styles.icons}>
 
-            // --- lad indholdet blive.
+    <Fa500Px style={style}/>
+    <FaAccessibleIcon style={style}/>
+    <FaBlackTie style={style}/>
+    <FaBomb style={style}/>
+    <FaBroom style={style} />
+    <FaCog style={style} />
+    <FaCoffee style={style} />
+    <FaGithub style={style} />
+    <FaJsSquare style={style}/>
+    <FaBeer style={style}/>
 
-        </div>
-    </div>
+</div>
 ```
 
-Tilføj følgende style til `devActionBar.module.css`
+Nu kan jeg skifte størrelse på alle ikoner i sættet med knapperne.
 
-```
-.status{
+## ActionBar som komponent
 
-    margin-top: 20px;
-}
-```
+Vi vil gerne gøre ActionBar til et komponent som kan aflevere en størrelse f.eks 150, som vi gør nu med vores knapper. Så kan man bruge det Action Panel andre steder hvor man har behov for at ændre størrelse på "noget".
 
-Nu skulle vi gerne se `size` ændre sig når vi trykker på knapperne. 
+## :dart: 1. Opret Action Panelet som komponent.
 
-På vores `input` har vi en mulighed for sætte en `defaultValue` lad os sætte den til size.
-
-`defaultValue={size}`
-
-Når du refresher browseren skulle slideren stå på den værdi vores `useState(150)` er sat til som udgangspunkt.
-
-# useEffect og useRef hooks.
-
-Men! - Når vi trykker på knapperne så ændre vores slider sig ikke det giver nogle uheldige "glitches" når man tager fat i slider bagefter. I har nok selv set det allerede!.
-
-Når et `state` ændre sig som vedhjælp af `useState` og man skal reagere på den state forandring. 
-
-Så benytter man hook´en `useEffect`.
-
-Indsæt følgende `useEffet` i `DevActionBar`
-
-```javascript
-const DevActionBar = ({setSizeFunction, size}) => {
-
-    const activeSlideRef = useRef(null);
-
-    useEffect(() => {
-
-        let slider = activeSlideRef.current;
-        slider.value = size;
-
-    }, [size])
-
-    return (
-        <div className={styles.container}>
-    // --
-```
-
-og `import` begge hook´s.
-
-```javascript
-import { useEffect, useRef } from "react";
-```
-
-Kig godt på useEffect :eyes:
-
-```javascript
-useEffect(() => {
-
-    let slider = activeSlideRef.current; // i virkeligheden svare det til -> document.querySelector("input[type=range]");
-    slider.value = size;
-
-}, [size])
-```
-
-I denne `useEffect` hook. Der sætter vi en reference til en slider variabel.
-
-```javascript
-let slider = activeSlideRef.current;
-```
-
-Vores "reference" ser mærkelig ud `activeSlideRef.current`. 
-Og hvis vi kigger i toppen af vores `DevActionBar` funktion så ser vi
-
-```javascript
-const activeSlideRef = useRef(null);
-```
-
-Men det betyder at vi vil lave en reference (useRef, en slags querySelector) og lige nu er den null, altså ingen ting.
-
-Men nu skal vi på vores `input` element fortælle at dette er reference elementet.
-
-Så indsæt referencen på input elementet.
-
-```javascript
-ref={activeSlideRef}
-```
+Tag Action Baren og opret et nyt komponent `<devActionBar></devActionBar>`.
 
 ```html
-<input type="range" ref={activeSlideRef} className={styles.range} min="50" max="300" defaultValue={size} onChange={(e) => setSizeFunction(e.target.value)}></input>
+<div className={styles.actionBar}>
+                
+    <span className={styles.btn} onClick={() => setSize(50)}>LILLE</span>
+    <span className={styles.btn} onClick={() => setSize(100)}>MELLEM</span>
+    <span className={styles.btn} onClick={() => setSize(150)}>STOR</span>
+                
+</div>
 ```
 
-Nu kan vi benytte `activeSlideRef.current` som en reference til vores element i `useEffect` hook´en.
+Opret komponentet i/som `compoents/dev/devActionBar/devActionbar.js`
+Husk at oprette `devActionbar.module.css` og flyt klasserne fra `devIcons.module.css`.
 
-Hvis slideren tilpasser sig knappernes værdi - så er alt godt :muscle:
+Når du har oprettet komponentet skal du indsætte det i `devIcons.js` igen.
 
-# Afslutning
+Nu kan du se at hvis du trykker på knapperne så får du en fejl.
 
-Her er react dokumentationen for react hooks     
-:link: `hooks` generelt     
-https://react.dev/reference/react/hooks
+```html
+Unhandled Runtime Error
+ReferenceError: setSize is not defined
+```
 
-Start med:      
-:link: `useState`       
-https://react.dev/reference/react/useState    
-:link: `useEffect`   
-https://react.dev/reference/react/useEffect    
-:link: `useRef`   
-https://react.dev/reference/react/useRef        
+Vi prøver at kalde setSize funktionen i action komponentet men setSize funktionen er i icons komponentet så det er to forskellige steder. 
 
+Men heldigvis kan vi sende setSize funktionen med ind til komponentet.
 
-:link: Man kan lave sine egne og der er også nogen der laver en masse til forskellig brug.  
-https://usehooks.com/
+Så lad os tilføje `setSize` funktionen som en `property` på vores action bar komponent i `devIcons.js` filen.
 
+```html
+<DevActionBar setSizeFunction={setSize}></DevActionBar>
+```
+
+Læg mærke til at jeg har givet property navnet: `setSizeFunction` og sat den lig med `setSize`.
+
+Hvis vi så åbner `devActionBar.js` så tager vi imod property funktionen ved at benytte det navn `setSizeFunction` som parameter i vores komponent.
+
+Indsæt `{setSizeFunction}` som parameter i DevActionBar komponentet.
+```javascript
+const DevActionBar = ({setSizeFunction}) => {
+```
+
+Det sidste der mangler, er at vi i actionbar komponentet udskifter `setSize` med `setSizeFunction`.
+
+Nu skulle vi kunne ændre størrelse på vores ikoner nøjagtig lige som før.
+
+:coffee: Flyt nu din `<DevActionBar></DevActionBar>` op over ikonerne så den ligger i toppen.
+
+# Input Range.
+
+Nu skal vi lave en ny knap til vores action bar.
+
+Kig *godt* på disse linier.
+
+```html
+<span className={styles.btn}>
+    <input type="range" min="50" max="150" onChange={(e) => setSizeFunction(e.target.value)}></input>
+</span>    
+```
+
+Vi har vores knap `<span className={styles.btn}></span`.
+
+I den indsætter vi et `input` men typen `range` - vi benytte eventen `onChange` og kalder vores funktion `setSizeFunction` med værdien fra vores `target` => `e.target.value`. 
+
+`e.target.value` er en værdi imellem `min` og `max` properties på `input` range feltet. 
+
+Indsæt knappen i action panelet og prøv at slide frem og tilbage.
+
+Så har vi en ikone oversigt hvor vi kan sætte størrelser.
+
+## Afslutning.
+
+Inden vi går til næste opgave.
+
+Vores "slider"/range input indstiller sig ikke på størrelsen hvis vi trykker på knapperne.
+
+Og hvordan kan vi i actionbaren skrive den værdi vores action bar er sat til?
+
+Vi løser det i næste opgave men forsøg lige at give det et skud.
 
 ### Næste skridt.
 
-Opgave 07
+Opgave 06
+
+
+
+
+
+
+

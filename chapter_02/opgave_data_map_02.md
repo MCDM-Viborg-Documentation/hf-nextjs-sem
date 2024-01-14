@@ -1,12 +1,12 @@
-# SEM Opgave
-
+# Media College
 ```
 Author      : Media College
 Department  : WEB 
 Year        : 2024 
-Description : Start med serverside data 
-                      
+Description : NextJS Opgave
+Doc         : opgave_data_map_02
 ```
+
 ### Indledning.
 
 Nu ikke så meget tekst - mere bas.
@@ -21,8 +21,6 @@ Vi fortsætter hvor vi slap i forrige opgave.
 ### :dart: 1. Assets, `<Image> vs <img>`.
 
 Vi starte med at oprette endnu en under-under side til data.
-
-
 
 ### :dart: Opret en ny under-under side.
 

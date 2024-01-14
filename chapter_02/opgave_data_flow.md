@@ -1,11 +1,11 @@
-# SEM Opgave
+# Media College
 
 ```
 Author      : Media College
 Department  : WEB 
 Year        : 2024 
 Description : Start med serverside data 
-                      
+Doc         : opgave_data_flow             
 ```
 ### Indledning.
 
@@ -30,7 +30,7 @@ Så har vi det der skal til for at lave et mindre Galleri af Portfolier.
 
 Vi skal lave følgende flow.
 
-![alt text](../../assets/flow_gallery.png)
+![alt text](../assets/flow_gallery.png)
 
 :bulb: *Se godt på billedet ovenover*.
 
@@ -50,7 +50,7 @@ På den måde skal vi kune lave en side til at håndtere *hvilket* `[GALLERY]` o
 
 I next er det præcis det man gør. Man oprette via mapper (*eller filer, men én ting af gangen*) sin dynamiske ruter.
 
-![alt text](../../assets/dynamic_folder_structure.png)
+![alt text](../assets/dynamic_folder_structure.png)
 
 Kig godt på mappe strukturen den *reflektere* vores url oven over.
 
@@ -189,6 +189,6 @@ http://localhost:3000/galleries/umbra/se-vi-lave-en-dynamisk-rute-og-udskrive-de
 
 Så mangler der bare en designer :)
 
-:bulb: Vi hopper videre og ignorerer, at du i sidste opgave har brugt tid på at lave et toggle komponent, man bliver ***tit*** overset som udvikler - hvis i vil ***ses***, så bliv *projekleder eller... rektor* :fire::eyes: .
+:bulb: Vi hopper videre og ignorerer, at du i sidste opgave har brugt tid på at lave et toggle komponent, man bliver ***tit*** overset som udvikler - hvis i vil ***ses***, så bliv *projekleder eller... rektor ..* :fire::eyes: .
 
 *Se index for næste skridt*.

@@ -1,138 +1,26 @@
-# MediaCollege Denmark
+# Kapitel 1.
 
-# Forudsætning.
-
-At alt er læst og *forstået* i den indlende opgave.
-
-Det er vigtigt at alle opgaver :dart: og spørgsmå :question: er løst.
-
-Husk også at læs igennem de links der er vedhængt.
-
-I de kommende opgaver bygger vi vidre på samme projekt.
-
-## :dart: Opgave
-
-Nu skal vi til at arbejde med vores applikation og i starten skal du bare følge anvisningerne i dette dokument.
-
-### Opret Navigations Komponent
-
-I `components` mappen opretter vi en `navigation`mappe.
-
-Og i den nye `navigation`mappe opretter vi to filer:
-
-`navigation.js` og `navigation.module.css`
-
-I `navigation.js` indsættes følgende:
-
-```javascript
-import Link from 'next/link';
-import styles from './navigation.module.css'
-import Image from 'next/image';
-
-const Navigation = () => {
-
-    return (
-        <div className={styles.container}>
-            <div className={styles.navBar}>
-                <div className={styles.logo}>
-                    <Link href="/"><Image src={'/square_logo.png'} width={40} height={40} alt={'logo'}></Image></Link>
-                </div>
-                <div>
-                    NAVIGATION
-                </div>
-                <div>
-                    {/* BURGER ICON */}
-                </div>
-            </div>
-        </div>
-    )
-
-}
-
-export default Navigation;
 ```
-
-I `navigation.module.css` indsættes. 
-
-```css
-.container {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-}
-
-.navBar {
-  padding : 0 20px;
-  width: 100%;
-  height : 60px;
-  display: flex;
-  background-color: var(--navigation-background-color);
-  color: var(--navigation-color);
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navBar img {
-  padding: 5px;
-  left: 2px;
-  top: 1px;
-  position: relative; 
-}
-
-.navBar .logo {
-  background-color: var(--navigation-logo-background-color);
-  border-radius: 20px;
-  height: 40px;
-  width: 40px;
-  cursor: pointer;
-  object-fit: contain;
-}
+Author      : Media College
+Department  : WEB 
+Year        : 2024 
+Description : En liste til at holde øje med den kronolgiske rækkefølge af opgaver.         
 ```
+:bulb:   Der kan opstå behov for at indføre et trin - derfor vil dokumenterne også blive omdøbt og miste sin nummerering.
+         Så hold øje med denne fil når du gennemgår opgaverne.
 
-Nu har vi oprettet vores main navigation og mangler bare at indsætte den i applikationen.
+## Oversigt
 
-Åbn `layout.js` filen og indsæt `<Navigation></Navigation>` komponentet lige efter `<body>` tagget.
+| Opgave dokumenter                 | Rækkefølge    | 
+| -                                 |:-------------:| 
+| [opgave_01.md](opgave_01.md)      | 1-1           | 
+| [opgave_02.md](opgave_02.md)      | 1-2           | 
+| [opgave_03.md](opgave_03.md)      | 1-3           | 
+| [opgave_04.md](opgave_04.md)      | 1-4           | 
+| [opgave_05.md](opgave_05.md)      | 1-5           | 
+| [opgave_06.md](opgave_06.md)      | 1-6           | 
+| [opgave_07.md](opgave_07.md)      | 1-7           | 
+| [opgave_08.md](opgave_08.md)      | :dart:        | 
 
-Hvis alt er gået godt skulle du gerne se en menu-bar på siden med et logo i venstre hjørne.
-
-### Indbyggede komponenter
-
-Åbn `navigation.js`.
-
-Vi benytter to indbyggede Next Komponenter i navigationen
-
-```javascript
-import Link from 'next/link';
-import Image from 'next/image';
-```
-
-:link: `<link>`
-Vi benytter Link for at optimere vores links struktur i applikationen.      
-https://nextjs.org/docs/app/api-reference/components/link
-
-:link: `<Image>`
-Vi benytter Image for at optimere vores billeder applikationen. 
-https://nextjs.org/docs/app/api-reference/components/image
-
-Brug lidt tid på at læse om begge komponenter.
-
-### Layout.js
-
-Vi arbejder også med `layout.js` og i dette tilfæde viroes root.layout. Vi vil senere lavet endnu en layout fil.    
-
-:link: `layout.js`    
-https://nextjs.org/docs/app/api-reference/file-conventions/layout
-
-### module.css og variabler dark/light.
-I `navigation.module.css` filen skal i ligge mærke til brugen af variabler. Disse variabler er oprettet i `global.css`.
-
-Prøv at ændre "dark" og "light" mode på dit styressystem og benyt lidt tid på a se hvordan stylesheetet er opsat.
-
-
-### Afslutning af denne opgave.
-
-Nu har vi indsat et globalt navigation vi vender tilbage til den senere.
-
-### Næste skridt.
-
-Opgave 02
+:coffee:
+*Nu skal du afvente respons på din aflevering. Der er en 7 dages behndlingstid*! 

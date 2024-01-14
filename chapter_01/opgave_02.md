@@ -1,80 +1,147 @@
-# MediaCollege Denmark
+# Media College
+
+```
+Author      : Media College
+Department  : WEB 
+Year        : 2024 
+Description : NextJS Opgave
+Doc         : opgave_02 
+```
 
 # Forudsætning.
 
-At alt er læst og *forstået* i den forrige opgave.
+At alt er læst og *forstået* i den indlende opgave.
 
 Det er vigtigt at alle opgaver :dart: og spørgsmå :question: er løst.
 
-Husk også at læs igennem de links der er vedhænngt.
+Husk også at læs igennem de links der er vedhængt.
 
-## :dart: 1. Opgave
+I de kommende opgaver bygger vi vidre på samme projekt.
 
-Fordi dette er et "skole projekt" opretter vi nu en rute til opgave løsninger og eksperimenter.
+## :dart: Opgave
 
-1. Opret en `assignments` mappe i `app` mappen.
-2. Opret `page.js` og `page.module.css` i `assigments` mappen.
+Nu skal vi til at arbejde med vores applikation og i starten skal du bare følge anvisningerne i dette dokument.
 
-I `page.js` indsættes følgende:
+### Opret Navigations Komponent
+
+I `components` mappen opretter vi en `navigation`mappe.
+
+Og i den nye `navigation`mappe opretter vi to filer:
+
+`navigation.js` og `navigation.module.css`
+
+I `navigation.js` indsættes følgende:
 
 ```javascript
-import styles from './page.module.css'
+import Link from 'next/link';
+import styles from './navigation.module.css'
+import Image from 'next/image';
 
-export default async function Page() {
+const Navigation = () => {
 
-  return (
-    <main className={styles.page} >
-        Assignents
-    </main>
-  )
+    return (
+        <div className={styles.container}>
+            <div className={styles.navBar}>
+                <div className={styles.logo}>
+                    <Link href="/"><Image src={'/square_logo.png'} width={40} height={40} alt={'logo'}></Image></Link>
+                </div>
+                <div>
+                    NAVIGATION
+                </div>
+                <div>
+                    {/* BURGER ICON */}
+                </div>
+            </div>
+        </div>
+    )
+
 }
+
+export default Navigation;
 ```
 
-I `page.module.css` indsættes. 
+I `navigation.module.css` indsættes. 
 
 ```css
-.page {
+.container {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
 
-  padding-top : 60px;
-  
+.navBar {
+  padding : 0 20px;
+  width: 100%;
+  height : 60px;
+  display: flex;
+  background-color: var(--navigation-background-color);
+  color: var(--navigation-color);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navBar img {
+  padding: 5px;
+  left: 2px;
+  top: 1px;
+  position: relative; 
+}
+
+.navBar .logo {
+  background-color: var(--navigation-logo-background-color);
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  object-fit: contain;
 }
 ```
 
-Nu har vi oprette det minmum der skal til for en lave en underside.
+Nu har vi oprettet vores main navigation og mangler bare at indsætte den i applikationen.
 
-### Læg mærke til..
+Åbn `layout.js` filen og indsæt `<Navigation></Navigation>` komponentet lige efter `<body>` tagget.
 
-At vores `page.module.css` har padding-top på 60 pixels. Der er fordi vores menu lige nu er fixed og dermed ligger ovenpå og fylder 60 oixels i højden.
+Hvis alt er gået godt skulle du gerne se en menu-bar på siden med et logo i venstre hjørne.
 
-Gå nu til siden `http://localhost:3000/assignments` og du skulle skulle se der står `Assignments` øverst til venstre.
+### Indbyggede komponenter
 
-## :dart: 2. Opgave
+Åbn `navigation.js`.
 
-Opret en ny rute/underside (route) i `assigments` mappen.
+Vi benytter to indbyggede Next Komponenter i navigationen
 
-Den skal hedde `icons`.
+```javascript
+import Link from 'next/link';
+import Image from 'next/image';
+```
 
-Når du er færdig skal man kunne gå til siden `http://localhost:3000/assignments/icons` og se der står `Icons` øverst til venstre som på assignments siden.
+:link: `<link>`
+Vi benytter Link for at optimere vores links struktur i applikationen.      
+https://nextjs.org/docs/app/api-reference/components/link
+
+:link: `<Image>`
+Vi benytter Image for at optimere vores billeder applikationen. 
+https://nextjs.org/docs/app/api-reference/components/image
+
+Brug lidt tid på at læse om begge komponenter.
+
+### Layout.js
+
+Vi arbejder også med `layout.js` og i dette tilfæde viroes root.layout. Vi vil senere lavet endnu en layout fil.    
+
+:link: `layout.js`    
+https://nextjs.org/docs/app/api-reference/file-conventions/layout
+
+### module.css og variabler dark/light.
+I `navigation.module.css` filen skal i ligge mærke til brugen af variabler. Disse variabler er oprettet i `global.css`.
+
+Prøv at ændre "dark" og "light" mode på dit styressystem og benyt lidt tid på a se hvordan stylesheetet er opsat.
+
 
 ### Afslutning af denne opgave.
 
-Vi har oprettet et sted til opgaver løsninger og diverse.
-
-Man kommer til at oprette utrolig mange `page.js` filer og mapper - Det gælder om at holde tunge lige i munden.
-
-:link: `page.js`      
-https://nextjs.org/docs/app/api-reference/file-conventions/page
-
-Se linkey og bemærk de to parametre et `page`komponent "bære" med sig, `params` og `searchParams`
-
-```
-export default function Page({ params, searchParams }) {
-  return <h1>My Page</h1>
-}
-```
-
-Dem vender vi tilbage til, men det er værd at huske at de to parametre altid er til stede på et `page` komponent.
+Nu har vi indsat et globalt navigation vi vender tilbage til den senere.
 
 ### Næste skridt.
 
-Opgave 03
+Opgave 02

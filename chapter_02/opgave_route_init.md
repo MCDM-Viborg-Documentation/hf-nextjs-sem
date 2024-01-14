@@ -1,15 +1,22 @@
-# Forudsætning.
+# Media College
+```
+Author      : Media College
+Department  : WEB 
+Year        : 2024 
+Description : NextJS Opgave
+Doc         : opgave_route_init 
+```
 
-At alt er læst og *forstået* i de forrige opgaver.
+### Indledning.
 
-* Alle intielle opgaver
-    * 0-7
-    * Aflevering via git.
-* Layout Init opgaven
+Nu ikke så meget tekst - mere bas.
 
-Det er vigtigt at alle opgaver :dart: og spørgsmå :question: er "løst".
+Vi fortsætter hvor vi slap i forrige opgave.
 
-Husk også at læs igennem de links der er vedhængt.
+### Forudsætning.
+
+1. Læs ovenstående indledning.
+2. De forrige opgaver i indexet.
 
 ## :dart: 1. Opgave Route.
 

@@ -1,11 +1,10 @@
-# SEM Opgave
-
+# Media College
 ```
 Author      : Media College
 Department  : WEB 
 Year        : 2024 
 Description : Start med serverside data 
-                      
+Doc         : opgave_data_portfolio
 ```
 ### Indledning.
 

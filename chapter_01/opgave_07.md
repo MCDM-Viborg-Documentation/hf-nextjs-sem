@@ -1,3 +1,12 @@
+# Media College
+
+```
+Author      : Media College
+Department  : WEB 
+Year        : 2024 
+Description : NextJS Opgave
+Doc         : opgave_07
+```
 # Forudsætning.
 
 At alt er læst og *forstået* i den forrige opgave.
@@ -8,71 +17,157 @@ Husk også at læs igennem de links der er vedhænngt.
 
 ## :dart: 1. Opgave Action Bar.
 
-Nu er vi snart færdig med vores action bar.
+Svaret på forrige opgaver er **size** vi skal selvfølgelig bruge vores size værdi.
 
-Vi har dog lige 2 ting tilbage.
+I `devicons.js` sætter vi size værdien `const [size, setSize] = useState(150);` og vi gør det hver gang vi kalder `setSize` funktionen.
 
-Det første er at vi indstille vores actionbar til de værdier vi ønsker som en configuration.
+Vi sender `size` med som property til vores `<DevActionBar>` komponent 
 
-Kig på det object.
-```javascript
-let config = {
-    small : 50,
-    medium : 100,
-    large : 150
-};
+```html
+<DevActionBar setSizeFunction={setSize} size={size}></DevActionBar>
 ```
 
-Hvis vi indsætte dette configurations object i `devicons.js` og tildeler det som property til `DevActionBar` så kan vi bruger værdier til at sætte vores udgangspunkt.
+Så åbner vi komponentet `devActionBar.js` og tage imod vores ny `parameter`.
 
 ```javascript
-<DevActionBar setSizeFunction={setSize} size={size} config={config}></DevActionBar>
-```
-
-Nu kan vi tage imod vores config i `devActionBar.js`.
-
-```javascript
-const DevActionBar = ({setSizeFunction, size, config}) => {
+const DevActionBar = ({setSizeFunction, size}) => {
 // ---
 ```
 
-og bruger værdierne hvor det giver mening `{config.small}, {config.medium}, {config.large}`
+For at få plads til at udskrive vores size skal vi ændre lidt på vores `DevActionBar` komponent layout og opsætning. 
+
+Det sker ofte under udvikling at man har behove for at omstrukturere/refakturere sin kode og tilpasse den nye omstændigheder.
+
+Det gælder især når man starter med at udvikle fordi man ikke altid har taget højde for alle de elementer man har behov for. 
+
+Ofte bliver man også klogere undervejs og ser nye muligheder.
+
+Komponenter kan altid "lige" få en container mere :)
+
+Vi har behov for en "header" til vores komponent. Så vi kan udskrive vores størrelse.
 
 ```html
-<span className={styles.btn} onClick={() => setSizeFunction(config.small)}>{config.small}</span>
+    <div className={styles.container}>
+        <div className={styles.status}><h1>{size}</h1></div>
+        <div className={styles.actionBar}>
+
+            // --- lad indholdet blive.
+
+        </div>
+    </div>
 ```
 
-Nu kan vi med cofig opsætte forskellige settings.
+Tilføj følgende style til `devActionBar.module.css`
 
-Nu er vi ved afslutningen af dette komponent. Men der er ret meget her som kan bruges generelt.
+```
+.status{
 
-Og vi kommer til at lave mange komponenter hvor dette er den oplagte "struktur".
+    margin-top: 20px;
+}
+```
 
-Så kig det godt igennem. :eyes:
+Nu skulle vi gerne se `size` ændre sig når vi trykker på knapperne. 
 
-Men der var lige en sidste ting.
+På vores `input` har vi en mulighed for sætte en `defaultValue` lad os sætte den til size.
 
-:dart: Opgave : En farverig opgave.
+`defaultValue={size}`
 
-Indsæt denne knap i `<DevActionBar></DevActionBar>`
+Når du refresher browseren skulle slideren stå på den værdi vores `useState(150)` er sat til som udgangspunkt.
+
+# useEffect og useRef hooks.
+
+Men! - Når vi trykker på knapperne så ændre vores slider sig ikke det giver nogle uheldige "glitches" når man tager fat i slider bagefter. I har nok selv set det allerede!.
+
+Når et `state` ændre sig som vedhjælp af `useState` og man skal reagere på den state forandring. 
+
+Så benytter man hook´en `useEffect`.
+
+Indsæt følgende `useEffet` i `DevActionBar`
+
+```javascript
+const DevActionBar = ({setSizeFunction, size}) => {
+
+    const activeSlideRef = useRef(null);
+
+    useEffect(() => {
+
+        let slider = activeSlideRef.current;
+        slider.value = size;
+
+    }, [size])
+
+    return (
+        <div className={styles.container}>
+    // --
+```
+
+og `import` begge hook´s.
+
+```javascript
+import { useEffect, useRef } from "react";
+```
+
+Kig godt på useEffect :eyes:
+
+```javascript
+useEffect(() => {
+
+    let slider = activeSlideRef.current; // i virkeligheden svare det til -> document.querySelector("input[type=range]");
+    slider.value = size;
+
+}, [size])
+```
+
+I denne `useEffect` hook. Der sætter vi en reference til en slider variabel.
+
+```javascript
+let slider = activeSlideRef.current;
+```
+
+Vores "reference" ser mærkelig ud `activeSlideRef.current`. 
+Og hvis vi kigger i toppen af vores `DevActionBar` funktion så ser vi
+
+```javascript
+const activeSlideRef = useRef(null);
+```
+
+Men det betyder at vi vil lave en reference (useRef, en slags querySelector) og lige nu er den null, altså ingen ting.
+
+Men nu skal vi på vores `input` element fortælle at dette er reference elementet.
+
+Så indsæt referencen på input elementet.
+
+```javascript
+ref={activeSlideRef}
+```
 
 ```html
-<span className={styles.btn} >
-    <input type="color" className={styles.color} onChange={(e) => console.log(e.target.value)}></input>
-</span>
+<input type="range" ref={activeSlideRef} className={styles.range} min="50" max="300" defaultValue={size} onChange={(e) => setSizeFunction(e.target.value)}></input>
 ```
 
-Tryk på knappen og kig i `consollen`.
+Nu kan vi benytte `activeSlideRef.current` som en reference til vores element i `useEffect` hook´en.
 
-Din opgave er at gøre det muligt at ændre farven på ikonerne med farve vælgeren.
+Hvis slideren tilpasser sig knappernes værdi - så er alt godt :muscle:
 
-:muscle: God Arbejdslyst.
+# Afslutning
+
+Her er react dokumentationen for react hooks     
+:link: `hooks` generelt     
+https://react.dev/reference/react/hooks
+
+Start med:      
+:link: `useState`       
+https://react.dev/reference/react/useState    
+:link: `useEffect`   
+https://react.dev/reference/react/useEffect    
+:link: `useRef`   
+https://react.dev/reference/react/useRef        
+
+
+:link: Man kan lave sine egne og der er også nogen der laver en masse til forskellig brug.  
+https://usehooks.com/
+
 
 ### Næste skridt.
 
-Kontakt anders@mediacollege.dk når du er nået hertil.
-
-Du må meget gerne tilføje dit projekt til github - hvis du holder det private så inviter "McAndersC" som "collaborator".  
-
-
-
+Opgave 07

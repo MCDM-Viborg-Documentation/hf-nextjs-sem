@@ -1,4 +1,12 @@
-# MediaCollege Denmark
+# Media College
+
+```
+Author      : Media College
+Department  : WEB 
+Year        : 2024 
+Description : NextJS Opgave
+Doc         : opgave_data_init 
+```
 
 # Indledning.
 

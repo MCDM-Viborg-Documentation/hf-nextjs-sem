@@ -1,10 +1,22 @@
-# Forudsætning.
+# Media College
+```
+Author      : Media College
+Department  : WEB 
+Year        : 2024 
+Description : NextJS Opgave
+Doc         : opgave_layout_init   
+```
 
-At alt er læst og *forstået* i den forrige opgave.
+### Indledning.
 
-Det er vigtigt at alle opgaver :dart: og spørgsmå :question: er løst.
+Nu ikke så meget tekst - mere bas.
 
-Husk også at læs igennem de links der er vedhænngt.
+Vi fortsætter hvor vi slap i forrige opgave.
+
+### Forudsætning.
+
+1. Læs ovenstående indledning.
+2. De forrige opgaver i indexet.
 
 ## :dart: 1. Opgave Layout.
 

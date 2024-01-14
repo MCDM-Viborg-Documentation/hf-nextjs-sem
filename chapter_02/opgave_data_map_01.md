@@ -1,11 +1,11 @@
-# SEM Opgave
+# Media College
 
 ```
 Author      : Media College
 Department  : WEB 
 Year        : 2024 
-Description : Start med serverside data 
-                      
+Description : NextJS Opgave
+Doc         : opgave_data_map_01
 ```
 ### Indledning.
 

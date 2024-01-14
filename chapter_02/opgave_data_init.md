@@ -1,12 +1,24 @@
-# SEM Opgave
+# Media College
 
 ```
 Author      : Media College
 Department  : WEB 
 Year        : 2024 
-Description : Start med serverside data 
-                      
+Description : NextJS Opgave
+Doc         : opgave_data_init 
 ```
+
+### Indledning.
+
+Nu ikke så meget tekst - mere bas.
+
+Vi fortsætter hvor vi slap i forrige opgave.
+
+### Forudsætning.
+
+1. Læs ovenstående indledning.
+2. De forrige opgaver i indexet.
+
 ### Indledning.
 
 Vi arbejder med serverdata, for at vende os til at benytte det i projekter fremad. Dette er også, så vi kan begynde at loop´e over data og lave komponeter tilsvarende.
