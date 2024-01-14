@@ -1,11 +1,5 @@
 # Media College Denmark.
 
-:warning: *Under udarbejdelse*
-
-:bulb: **DETTE** dokument er udgangspunktet. 
-
-Filer du før havde links til, kan for øjeblikket blive flyttet/slette osv. Hold dig orienteret via denne readme.
-
 ## :dart: Kom igang.
 
 1. Hent udviklings skarbelons repo som zip-fil fra denne url: https://github.com/MCDM-Viborg/sem_assignment_galleries_init
