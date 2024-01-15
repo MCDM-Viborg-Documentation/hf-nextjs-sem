@@ -23,9 +23,9 @@ Skriv i terminalen og tryk enter:
 
 Det er vigtigt i den forbindelse at du har følgende extensions installeret i vscode:
 
-:dart: **Installér vscode extensions idents**    
-*paste en ident ind i serch feltet på under extensions*         
+:dart: **Installér vscode extensions idents**       
+*paste en ident ind i search feltet på under extensions*         
 
-bierner.github-markdown-preview
-bierner.markdown-emoji
+1. bierner.github-markdown-preview     
+2. bierner.markdown-emoji
 
