@@ -14,7 +14,7 @@ Portfolio Dashboard.
 Du skal udarbejde et portfolio dashboard.
 
 
-![alt text](../../../assets/portfolio_project_full.drawio.png)
+![alt text](../assets/portfolio_project_full.drawio.png)
 
 ### Dashboard / One Page(r).
 
