@@ -22,10 +22,10 @@ Vi fortsætter hvor vi slap i forrige opgave.
 Vi starter denne opgave med lidt generelle rettelse, igen med baggrund i jeres afleveringer.!
 
 1. Erstat `/lib/data.service.js` med indholdet fra denne md.   	    
-:link:  [`misc/rettelse_til_dataservice.md (i dette repositorie)`](../../misc/rettelse_til_dataservice.md)
+:link:  [`misc/rettelse_til_dataservice.md (i dette repositorie)`](../misc/rettelse_til_dataservice.md)
 
 1. Erstat `/app/global.css` med indholdet fra denne md.   	    
-:link:  [`misc/rettelse_til_globalcss.md (i dette repositorie)`](../../misc/rettelse_til_globalcss.md)
+:link:  [`misc/rettelse_til_globalcss.md (i dette repositorie)`](../misc/rettelse_til_globalcss.md)
 
 ### :dart: Knap så VIGTIG!
 
