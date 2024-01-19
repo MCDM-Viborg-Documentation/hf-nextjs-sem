@@ -18,9 +18,9 @@ Du skal udarbejde et portfolio dashboard.
 
 ### Dashboard / One Page(r).
 
-Ovenstående billede er hvad der forvents. En forside hvor man via mmenu´en giver mulighed for at få et "split-view" med links til alle porfolier i venstre side og tilsvarene billeder i højre.
+Ovenstående billede er hvad der forvents. En forside hvor man via menu´en giver mulighed for at få et "split-view" med links til alle porfolier i venstre side og tilsvarene billeder i højre.
 
-Der er ikke rigtig taget stilling til hvad der sker når man ikke har valgt et galleri eller portfolio. Det er op til dig.
+Der er ikke rigtig taget stilling til, hvad der sker når man **ikke** har valgt et galleri eller portfolio. Det er op til dig.
 
 ### :dart: Opgaver.
 
