@@ -137,8 +137,8 @@ Så :pencil: ikonet henviser til en snippet-fil i snippets mappen.
 
 Erstat nu `{JSON.stringify(galleries, null, 2)}` med `<DevDebugJson content={galleries} />`
 
-:goal_net: Nu skulle du have en "Accordion" der ved klik toggler alt galleri dataen udskrevet som streng.
-
+:goal_net: Nu skulle du have en "Accordion" der ved klik, toggler alt galleri data´en og udskriver som streng.
++
 :bulb: Du kan *for sjov* sætte `<DevDebugJson content={ { hello : "world" } } />` ind på siden og se helloworld data´en.
 
 Bare en nem måde, at udskrive sin data på, inden man opretter et komponent til rent faktisk at præsentere denne data.
