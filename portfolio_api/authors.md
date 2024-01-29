@@ -20,7 +20,7 @@ Nu skal du oprette en underside og et par komponenter.
 
 1. Opret en underside :file_folder: `authors`.
 2. Opret et **AuthorsCollection** Client Komponent.
-2. Hent og udskriv alle Authors  ved hjælp af `<DebugJson data={}>` komponentet (*som i client component*).      
+2. Hent og udskriv alle Authors  ved hjælp af `<DebugJson content={}>` komponentet (*som i client component*).      
 Endpoint:`Get Authors` *(se postman)*
 
 ### 2. AuthorImages Component.
