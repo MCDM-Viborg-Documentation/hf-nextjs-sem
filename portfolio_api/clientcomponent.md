@@ -95,7 +95,7 @@ const [galleryName, setGalleryName] = useState('obscura');
 Nu skal vi ændre endpointet til at benytte vores variabel.
 
 ```javascript
-`http://localhost:3000/api/author?gallery=${galleryName}`
+`http://localhost:3000/api/authors?gallery=${galleryName}`
 ```
 
 Læg mærke til at vores `useEffect` hook nu fortæller at vi mangler noget i vores "afhænigheds-array".
