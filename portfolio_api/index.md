@@ -21,4 +21,5 @@ Hent som zip fil eller fork opgaven. Læs *readme.md* filen og vend tilbage til 
 | [clientcomponent.md](clientcomponent.md)  | 2             | 
 | [authors.md](authors.md)                  | 3             | 
 | [galleries.md](galleries.md)              | 4             | 
-| Pause                                     | :coffee:        | 
+| Pause                                     | :coffee:      | 
+| [vanilla.md](galleries.md)                | 5             | 
