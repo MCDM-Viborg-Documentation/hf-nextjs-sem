@@ -23,3 +23,4 @@ Hent som zip fil eller fork opgaven. Læs *readme.md* filen og vend tilbage til 
 | [galleries.md](galleries.md)              | 4             | 
 | Pause                                     | :coffee:      | 
 | [vanilla.md](galleries.md)                | 5             | 
+| [paging_postman.md](paging_postman.md)    | 6             | 
