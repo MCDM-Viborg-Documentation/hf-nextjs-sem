@@ -6,6 +6,8 @@ Department  : WEB
 Year        : 2024 
 Description : Portfoile API ogave         
 ```
+Flow.        
+![alt text](../assets/opgave.png)
 
 1. Opret et projekt. (Kopi eller fra bunden)
 2. Forsiden skal indeholde search.
