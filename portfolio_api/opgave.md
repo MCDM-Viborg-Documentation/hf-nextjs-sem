@@ -1,4 +1,4 @@
-# Portfolio.
+# Opgave.
 
 ```
 Author      : Media College
@@ -14,7 +14,7 @@ Description : Portfoile API ogave
         1. Og dermed komme til en side med enten obscura eller umbra billeder i en karrusel.
     2. Auhtor Navnet
         1. Og dermed lande på en side med en Auhtors billeder i en karrusel.
-
+4. Ekstra: Paging knapper, vi har lige nu "Next" og "Previous" men hvordan får vi en knap for hver side i vores paging.
 I bestemmer selv, hvordan og hvroledes!
 
 God Arbejdslyst.
